@@ -20,16 +20,18 @@ let countOne = 0
 let countTwo = 0
 let displayNumber =""
 let sign = ""
-let output = document.getElementById("calc-output")
+let finalOutput = document.getElementById("calc-output-one")
+let output = document.getElementById("calc-output-two")
 
 function sum(){ 
    
     sign = "+"
+    finalOutput.textContent += sign
     output.textContent = sign
 }
 
 function total(){
-   
+    
     sign = "="
     output.textContent = sign
 
@@ -40,6 +42,12 @@ output.textContent = zero}
 
 function one() {
     let one = 1
-    countOne = one
-    output.textContent += countOne
+    countOne+= output
+    finalOutput.textContent+= one
+    output.textContent = one
+    if (countOne >=1 ){
+        countTwo +=1
+    }
 }
+
+
